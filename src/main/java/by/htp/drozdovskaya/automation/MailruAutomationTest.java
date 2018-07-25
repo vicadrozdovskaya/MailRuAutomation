@@ -25,6 +25,13 @@ public class MailruAutomationTest {
 		steps.loginMailru(USERNAME, PASSWORD);
 	
 	}
+	@Test(description = "Write letter Mail.ru")
+	public void oneCanWriteLetterfromMailru()
+	{
+		steps.loginMailru(USERNAME, PASSWORD);
+		steps.writeLetter();
+	
+	}
 
 	@AfterMethod(description = "Stop Browser")
 	public void stopBrowser()
