@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 
 import by.htp.drozdovskaya.automation.driver.DriverSingleton;
+import by.htp.drozdovskaya.automation.entity.Letter;
+import by.htp.drozdovskaya.automation.pages.LetterFramePage;
 import by.htp.drozdovskaya.automation.pages.LoginPage;
 import by.htp.drozdovskaya.automation.pages.MainPage;
 
@@ -31,6 +33,11 @@ public class Steps {
 	public void writeLetter() {
 		MainPage mainPage = new MainPage(driver);
 		mainPage.clickOnWriteLetter();
+	}
+	
+	public void sendLetter(Letter letter) {
+		LetterFramePage letterPage = new LetterFramePage(driver);
+		letterPage.sendLetter(letter);
 	}
 
 }
