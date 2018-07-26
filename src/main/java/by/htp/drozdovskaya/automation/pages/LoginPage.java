@@ -33,6 +33,10 @@ public class LoginPage extends AbstractPage {
 		buttonSubmit = driver.findElement(By.xpath("//div/child::button[@data-test-id='submit-button']"));
 		buttonSubmit.click();
 	}
+	public String getLoggedInUserName()
+	{
+		return driver.findElement(By.xpath("//span[@id='PH_authMenu_button']/child::i[@id='PH_user-email']")).getText(); 
+	}
 	
 
 }

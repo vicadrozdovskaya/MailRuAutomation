@@ -1,5 +1,6 @@
 package by.htp.drozdovskaya.automation;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -23,13 +24,7 @@ public class MailruAutomationTest {
 	public void oneCanloginMailru()
 	{
 		steps.loginMailru(USERNAME, PASSWORD);
-	
-	}
-	@Test(description = "Write letter Mail.ru")
-	public void oneCanWriteLetterfromMailru()
-	{
-		steps.loginMailru(USERNAME, PASSWORD);
-		steps.writeLetter();
+		Assert.assertTrue(steps.isLoggedIn("tathtp@mail.ru"));
 	
 	}
 
