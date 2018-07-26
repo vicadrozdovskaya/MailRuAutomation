@@ -23,6 +23,9 @@ public class LetterFramePage extends AbstractPage {
 		driver.findElements(By.xpath("//ancestor::div[@data-name='send']")).get(0).click();
 		
 	}
+	public String getTextAboutSendLetter() {
+		return driver.findElement(By.xpath("//div[@class='message-sent__title']")).getText();
+	}
 	
 	public String getCurrentLetterFramePageName()
 	{

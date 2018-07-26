@@ -45,6 +45,11 @@ public class Steps {
 	public void sendLetter(Letter letter) {
 		LetterFramePage letterPage = new LetterFramePage(driver);
 		letterPage.sendLetter(letter);
+		System.out.println();
+	}
+	public String getTextAboutSendLetter() {
+		LetterFramePage letterPage = new LetterFramePage(driver);
+		return letterPage.getTextAboutSendLetter();
 	}
 
 }

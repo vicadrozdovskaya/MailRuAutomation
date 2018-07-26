@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -44,6 +45,7 @@ public class MailruSendLetterAutomationTest {
 	public void canSendLetterfromMailru(Letter actual)
 	{
 		steps.sendLetter(actual);
+		Assert.assertEquals("Ваше письмо отправлено. Перейти во Входящие", steps.getTextAboutSendLetter());
 	}
 
 	@AfterTest(description = "Stop Browser")
