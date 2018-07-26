@@ -1,5 +1,6 @@
 package by.htp.drozdovskaya.automation;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -30,7 +31,7 @@ public class MailruWriteLetterAutomationTest {
 	@Test(description = "Write letter Mail.ru")
 	public void oneCanWriteLetterfromMailru()
 	{
-		steps.writeLetter();
+		Assert.assertEquals("https://e.mail.ru/compose/", steps.writeLetter());
 	}
 
 	@AfterTest(description = "Stop Browser")

@@ -36,9 +36,10 @@ public class Steps {
 		String actualUsername = loginPage.getLoggedInUserName().trim().toLowerCase();
 		return actualUsername.equals(username);
 	}
-	public void writeLetter() {
+	public String writeLetter() {
 		MainPage mainPage = new MainPage(driver);
 		mainPage.clickOnWriteLetter();
+		return mainPage.getCurrentMainInboxPageName();
 	}
 	
 	public void sendLetter(Letter letter) {

@@ -1,5 +1,8 @@
 package by.htp.drozdovskaya.automation.pages;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -22,7 +25,10 @@ public class MainPage extends AbstractPage
 	}
 	public String getCurrentMainInboxPageName()
 	{
-		return driver.getCurrentUrl();
+		Pattern pat = Pattern.compile("[a-z:/.]+");
+		Matcher matcher = pat.matcher(driver.getCurrentUrl());
+		matcher.find();
+		return matcher.group();
 	}
 
 	@Override
