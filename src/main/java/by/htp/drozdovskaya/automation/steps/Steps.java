@@ -8,6 +8,7 @@ import by.htp.drozdovskaya.automation.entity.Letter;
 import by.htp.drozdovskaya.automation.pages.LetterFramePage;
 import by.htp.drozdovskaya.automation.pages.LoginPage;
 import by.htp.drozdovskaya.automation.pages.MainPage;
+import by.htp.drozdovskaya.automation.pages.SentPage;
 
 public class Steps {
 	
@@ -50,6 +51,12 @@ public class Steps {
 	public String getTextAboutSendLetter() {
 		LetterFramePage letterPage = new LetterFramePage(driver);
 		return letterPage.getTextAboutSendLetter();
+	}
+	
+	public boolean findLetteInSentPage(Letter letter) {
+		SentPage sentPage = new SentPage(driver);
+		sentPage.openPage();
+		return sentPage.isLetterSent(letter);
 	}
 
 }
