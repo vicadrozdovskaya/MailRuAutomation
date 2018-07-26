@@ -35,7 +35,7 @@ public class MailruSentLetterAutomationTest {
 	}
 	@BeforeMethod
 	public void sendLetter() {
-		//steps.sendLetter(letter);
+		steps.sendLetter(letter);
 		steps.findLetteInSentPage(letter);
 	}
 
