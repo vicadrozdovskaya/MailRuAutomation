@@ -8,6 +8,7 @@ import by.htp.drozdovskaya.automation.entity.Letter;
 import by.htp.drozdovskaya.automation.pages.LetterFramePage;
 import by.htp.drozdovskaya.automation.pages.LoginPage;
 import by.htp.drozdovskaya.automation.pages.MainPage;
+import by.htp.drozdovskaya.automation.pages.SentLetterPage;
 import by.htp.drozdovskaya.automation.pages.SentPage;
 
 public class Steps {
@@ -57,6 +58,11 @@ public class Steps {
 		SentPage sentPage = new SentPage(driver);
 		sentPage.openPage();
 		return sentPage.isLetterSent(letter);
+	}
+	
+	public Letter getLetterInSentLetterPage() {
+		SentLetterPage sentLetterPage = new SentLetterPage(driver);
+		return sentLetterPage.getSentLetter();
 	}
 
 }
