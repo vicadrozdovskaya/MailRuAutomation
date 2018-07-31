@@ -1,0 +1,13 @@
+<suite name="MailruAutomationTest">
+
+	<test name="MailruAutomationTest">
+
+		 <classes>
+			<class name="by.htp.drozdovskaya.automation.MailruAutomationTest">
+			</class>
+			
+		</classes>
+		
+	</test>
+	
+</suite>
