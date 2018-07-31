@@ -28,9 +28,10 @@ public class LoginPage extends AbstractPage {
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='ag-popup__frame__layout__iframe']")));
 		inputLogin = driver.findElement(By.xpath("//input[@name='Login']"));
 		inputLogin.sendKeys(username);
+		driver.findElement(By.xpath("//button[@class = 'c0187 c0170 c0192 c0175 c0188 c0171']")).click();
 		inputPassword = driver.findElement(By.xpath("//div[@class='c0137 c0142 c0143']/child::input"));
 		inputPassword.sendKeys(password);
-		buttonSubmit = driver.findElement(By.xpath("//div/child::button[@data-test-id='submit-button']"));
+		buttonSubmit = driver.findElement(By.xpath("//div/child::button[@data-test-id='next-button']"));
 		buttonSubmit.click();
 	}
 	public String getLoggedInUserName()

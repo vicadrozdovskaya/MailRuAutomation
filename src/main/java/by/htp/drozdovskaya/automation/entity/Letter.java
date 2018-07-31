@@ -7,7 +7,6 @@ public class Letter {
 	private String content;
 	
 	public Letter() {
-		
 	}
 	
 	public Letter(String adress, String subject, String content) {

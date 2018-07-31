@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class DriverSingleton {
+public class DriverSingleton { //круто если написать singletone через enum
 
 	private static WebDriver driver;
 	private final static String CHROME = "webdriver.chrome.driver";
